@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <title>Assignment 2</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <h1>Assignment 2: Reflections on Digital Wellbeing</h1>
+
+    <h2>pt 1</h2>
+
+    <h2>pt 2</h2>
+    <blockquote class="twitter-tweet" style="margin: 0 0 10em 0;">
+        <p lang="en" dir="ltr">twitter: a story in four parts <a
+                href="https://t.co/D8HmaGHo4i">pic.twitter.com/D8HmaGHo4i</a></p>&mdash; instagram ➪ @shereenshafi
+        (@shereeny)
+        <a href="https://twitter.com/shereeny/status/1429451325453053962?ref_src=twsrc%5Etfw">August 22, 2021</a>
+    </blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <h2>pt 3</h2>
+    <img src=./images/phone_screen.png alt="phonescreen" usemap="#apps" />
+    <map name="apps">
+        <area shape="rect" coords="48, 81, 88, 115" class="crossword" />
+        <area shape="rect" coords="116, 80, 152, 118" class="pinterest" />
+    </map>
+    <div id="click_app">Hover over on an app to view</div>
+    <div id="crossword_desc"></div>
+    <div id="pinterest_desc" style="display: none">pinterest</div>
+
+    <script>
+        $("area.crossword").hover(
+            function () {
+                $("#crossword_desc").append($("<span> crossword </span>"));
+            }, function () {
+                $("#crossword_desc").find("span").last().remove();
+            }
+        );
+    </script>
+</body>
+
+</html
