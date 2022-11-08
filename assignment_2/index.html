@@ -24,19 +24,23 @@
     <img src=https://janemilym.github.io/intro_hci/images/phone_screen.png alt="phonescreen" usemap="#apps" />
     <map name="apps">
         <area shape="rect" coords="48, 81, 88, 115" alt="crossword" onclick="showCrossword()" />
-        <div id="crossword">crossword</div>
-
         <area shape="rect" coords="116, 80, 152, 118" alt="pinterest" onclick="showPinterest()" />
-        <div id="pinterest">pinterest</div>
     </map>
+    <div id="app_desc">Click on an app to view
+        <div id="crossword" style="display: none">crossword</div>
+        <div id="pinterest" style="display: none">pinterest</div>
+    </div>
 
     <script>
         function showCrossword() {
             var x = document.getElementById("crossword");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
+            var def = document.getElementById("app_desc");
+            if (x.style.display === "none") {
+                def.style.display = "none";
                 x.style.display = "block";
+            } else {
+                def.style.display = "block";
+                x.style.display = "none";
             }
         }
     </script>
